@@ -1,0 +1,15 @@
+# ===================================
+#  Import/Export Behavior Config
+# ===================================
+
+import:
+    title: hendrikerz.patreonlist::lang.plugin.import_csv
+    modelClass: HendrikErz\PatreonList\Models\PatronImport
+    list: $/hendrikerz/patreonlist/models/patron/columns.yaml
+    defaultRedirect: /hendrikerz/patreonlist/patrons
+    redirect: /hendrikerz/patreonlist/patrons
+defaultFormatOptions:
+    delimiter: ','
+    enclosure: '"'
+    escape: '\'
+    encoding: 'utf-8'

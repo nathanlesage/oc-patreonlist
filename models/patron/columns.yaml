@@ -1,0 +1,62 @@
+columns:
+    id:
+        label: hendrikerz.patreonlist::lang.columns.id_label
+        type: number
+        invisible: true
+    created_at:
+        label: hendrikerz.patreonlist::lang.columns.created_on_label
+        type: datetime
+        invisible: true
+    updated_at:
+        label: hendrikerz.patreonlist::lang.columns.updated_on_label
+        type: datetime
+        invisible: true
+    deleted_at:
+        label: hendrikerz.patreonlist::lang.columns.removed_on_label
+        type: datetime
+        invisible: true
+    name:
+        label: hendrikerz.patreonlist::lang.columns.name_label
+        type: text
+        searchable: true
+    email:
+        label: hendrikerz.patreonlist::lang.columns.email_label
+        type: text
+        searchable: true
+    twitter:
+        label: hendrikerz.patreonlist::lang.columns.twitter_label
+        type: text
+        searchable: true
+    patron_status:
+        label: hendrikerz.patreonlist::lang.columns.status_label
+        type: switch
+    follows_you:
+        label: hendrikerz.patreonlist::lang.columns.follows_label
+        type: switch
+    current_pledge:
+        label: hendrikerz.patreonlist::lang.columns.pledge_label
+        type: number
+        format: $%d
+    lifetime_pledge:
+        label: hendrikerz.patreonlist::lang.columns.lifetime_label
+        type: number
+        format: $%d
+    tier:
+        label: hendrikerz.patreonlist::lang.columns.tier_label
+        relation: tier
+        select: name
+        searchable: true
+        sortable: true
+    patron_since:
+        label: hendrikerz.patreonlist::lang.columns.patronage_label
+        type: timesince
+    max_amount:
+        label: hendrikerz.patreonlist::lang.columns.max_label
+        type: number
+        format: $%d
+    last_charge:
+        label: hendrikerz.patreonlist::lang.columns.last_charge_label
+        type: date
+    charge_status:
+        label: hendrikerz.patreonlist::lang.columns.charge_status_label
+        type: text

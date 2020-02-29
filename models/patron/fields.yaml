@@ -1,0 +1,84 @@
+tabs:
+    fields:
+        name:
+            label: 'hendrikerz.patreonlist::lang.patrons.form_input_name_label'
+            span: auto
+            required: true
+            type: text
+            comment: 'hendrikerz.patreonlist::lang.patrons.form_input_name_comment'
+            tab: 'hendrikerz.patreonlist::lang.patrons.form_tab_personal_title'
+        email:
+            label: 'hendrikerz.patreonlist::lang.patrons.form_input_email_label'
+            span: auto
+            type: text
+            comment: 'hendrikerz.patreonlist::lang.patrons.form_input_email_comment'
+            tab: 'hendrikerz.patreonlist::lang.patrons.form_tab_personal_title'
+        twitter:
+            label: 'hendrikerz.patreonlist::lang.patrons.form_input_twitter_label'
+            span: auto
+            type: text
+            comment: 'hendrikerz.patreonlist::lang.patrons.form_input_twitter_comment'
+            tab: 'hendrikerz.patreonlist::lang.patrons.form_tab_personal_title'
+        patron_since:
+            label: 'hendrikerz.patreonlist::lang.patrons.form_input_since_label'
+            mode: datetime
+            span: auto
+            type: datepicker
+            comment: 'hendrikerz.patreonlist::lang.patrons.form_input_since_comment'
+            tab: 'hendrikerz.patreonlist::lang.patrons.form_tab_personal_title'
+        charge_status:
+            label: 'hendrikerz.patreonlist::lang.patrons.form_input_charge_status_label'
+            span: auto
+            type: text
+            comment: 'hendrikerz.patreonlist::lang.patrons.form_input_charge_status_comment'
+            tab: 'hendrikerz.patreonlist::lang.patrons.form_tab_personal_title'
+        patron_status:
+            label: 'Patron Status'
+            options:
+                - 'Former Patron'
+                - 'Active Patron'
+            showSearch: true
+            span: auto
+            placeholder: 'Please select'
+            default: '1'
+            type: dropdown
+            comment: 'The Patron''s current status'
+            tab: 'hendrikerz.patreonlist::lang.patrons.form_tab_personal_title'
+        follows_you:
+            label: 'hendrikerz.patreonlist::lang.patrons.form_input_follower_label'
+            span: auto
+            type: switch
+            comment: 'hendrikerz.patreonlist::lang.patrons.form_input_follower_comment'
+            tab: 'hendrikerz.patreonlist::lang.patrons.form_tab_personal_title'
+        tier:
+            label: 'hendrikerz.patreonlist::lang.patrons.form_input_tier_label'
+            span: auto
+            required: false
+            type: relation
+            comment: 'hendrikerz.patreonlist::lang.patrons.form_input_tier_comment'
+            tab: 'hendrikerz.patreonlist::lang.patrons.form_tab_status_title'
+        current_pledge:
+            label: 'hendrikerz.patreonlist::lang.patrons.form_input_pledge_label'
+            span: auto
+            type: number
+            comment: 'hendrikerz.patreonlist::lang.patrons.form_input_pledge_comment'
+            tab: 'hendrikerz.patreonlist::lang.patrons.form_tab_status_title'
+        lifetime_pledge:
+            label: 'hendrikerz.patreonlist::lang.patrons.form_input_lifetime_label'
+            span: auto
+            type: number
+            comment: 'hendrikerz.patreonlist::lang.patrons.form_input_lifetime_comment'
+            tab: 'hendrikerz.patreonlist::lang.patrons.form_tab_status_title'
+        max_amount:
+            label: 'hendrikerz.patreonlist::lang.patrons.form_input_max_label'
+            span: auto
+            type: number
+            comment: 'hendrikerz.patreonlist::lang.patrons.form_input_max_comment'
+            tab: 'hendrikerz.patreonlist::lang.patrons.form_tab_status_title'
+        last_charge:
+            label: 'hendrikerz.patreonlist::lang.patrons.form_input_lastcharge_label'
+            mode: datetime
+            span: auto
+            type: datepicker
+            comment: 'hendrikerz.patreonlist::lang.patrons.form_input_lastcharge_comment'
+            tab: 'hendrikerz.patreonlist::lang.patrons.form_tab_status_title'

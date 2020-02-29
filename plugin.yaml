@@ -1,0 +1,24 @@
+plugin:
+    name: 'hendrikerz.patreonlist::lang.plugin.name'
+    description: 'hendrikerz.patreonlist::lang.plugin.description'
+    author: 'Hendrik Erz'
+    icon: oc-icon-credit-card
+    homepage: 'https://www.zettlr.com'
+navigation:
+    main:
+        label: 'hendrikerz.patreonlist::lang.plugin.name'
+        url: hendrikerz/patreonlist/patrons
+        icon: icon-credit-card
+        sideMenu:
+            list:
+                label: 'hendrikerz.patreonlist::lang.plugin.list_patrons'
+                url: hendrikerz/patreonlist/patrons
+                icon: icon-list-ul
+            import:
+                label: 'hendrikerz.patreonlist::lang.plugin.import_csv'
+                url: hendrikerz/patreonlist/patrons/import
+                icon: icon-table
+            tiers:
+                label: Tiers
+                url: /hendrikerz/patreonlist/tiers
+                icon: icon-sitemap

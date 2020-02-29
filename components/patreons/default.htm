@@ -1,0 +1,6 @@
+<h2>Patrons</h2>
+  <ul>
+    {% for patron in __SELF__.patrons %}
+    <li>{{ patron.name }} {% if patron.tier %}({{ patron.tier.name }}){% endif %}</li>
+    {% endfor %}
+  </ul>

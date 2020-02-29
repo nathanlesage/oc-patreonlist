@@ -1,0 +1,8 @@
+<?php Block::put('breadcrumb') ?>
+    <ul>
+        <li><a href="<?= Backend::url('hendrikerz/patreonlist/tiers') ?>"><?= e(trans('hendrikerz.patreonlist::lang.tiers.tiers_title')) ?></a></li>
+        <li><?= e($this->pageTitle) ?></li>
+    </ul>
+<?php Block::endPut() ?>
+
+<?= $this->reorderRender() ?>

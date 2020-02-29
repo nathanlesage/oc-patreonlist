@@ -1,0 +1,41 @@
+columns:
+    id:
+        label: hendrikerz.patreonlist::lang.columns.id_label
+        type: number
+        invisible: true
+    created_at:
+        label: hendrikerz.patreonlist::lang.columns.created_on_label
+        type: datetime
+        invisible: true
+    updated_at:
+        label: hendrikerz.patreonlist::lang.columns.updated_on_label
+        type: datetime
+        invisible: true
+    deleted_at:
+        label: hendrikerz.patreonlist::lang.columns.deleted_on_label
+        type: datetime
+        invisible: true
+    sort_order:
+        label: hendrikerz.patreonlist::lang.columns.sort_label
+        type: text
+        invisible: true
+    name:
+        label: hendrikerz.patreonlist::lang.columns.name_label
+        type: text
+        searchable: true
+        sortable: true
+    description:
+        label: hendrikerz.patreonlist::lang.columns.description_label
+        type: text
+        searchable: true
+        sortable: false
+    pledge_amount:
+        label: hendrikerz.patreonlist::lang.columns.pledge_amount_label
+        type: number
+        format: $%d
+        searchable: true
+        sortable: true
+    patrons_count:
+        label: hendrikerz.patreonlist::lang.columns.patron_count_label
+        relation: patrons
+        useRelationCount: true

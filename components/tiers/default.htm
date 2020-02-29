@@ -1,0 +1,16 @@
+<h2>Patrons</h2>
+  <ul>
+    {% for tier in __SELF__.tiers %}
+    <li>
+      <strong>{{ tier.name }}</strong>
+      {% if tier.description %}
+      <br>{{ tier.description|raw }}
+      {% endif %}
+      <ul>
+        {% for patron in tier.patrons %}
+        <li>{{ patron.name }}</li>
+        {% endfor %}
+      </ul>
+    </li>
+    {% endfor %}
+  </ul>

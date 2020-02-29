@@ -1,0 +1,20 @@
+fields:
+    name:
+        label: 'hendrikerz.patreonlist::lang.tiers.form_input_name_label'
+        span: auto
+        required: 1
+        type: text
+        comment: 'hendrikerz.patreonlist::lang.tiers.form_input_name_comment'
+    pledge_amount:
+        label: 'hendrikerz.patreonlist::lang.tiers.form_input_pledge_amount_label'
+        span: auto
+        required: 1
+        type: number
+        comment: 'hendrikerz.patreonlist::lang.tiers.form_input_pledge_amount_comment'
+    description:
+        label: 'hendrikerz.patreonlist::lang.tiers.form_input_description_label'
+        size: ''
+        span: full
+        type: richeditor
+        commentAbove: 'hendrikerz.patreonlist::lang.tiers.form_input_description_comment'
+        toolbarButtons: bold|italic|underline|strikeThrough|subscript|superscript|fontFamily|fontSize|color|emoticons|inlineStyle|paragraphStyle|paragraphFormat|align|formatOL|formatUL|outdent|indent|quote|insertHR|insertLink|insertImage|insertVideo|insertTable|undo|redo|clearFormatting|selectAll|html

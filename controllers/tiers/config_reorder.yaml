@@ -1,0 +1,5 @@
+title: hendrikerz.patreonlist::lang.tiers.reorder_form_title
+modelClass: HendrikErz\PatreonList\Models\Tier
+nameFrom: name
+toolbar:
+    buttons: reorder_toolbar

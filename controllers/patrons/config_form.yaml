@@ -1,0 +1,17 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: Patron
+form: $/hendrikerz/patreonlist/models/patron/fields.yaml
+modelClass: HendrikErz\PatreonList\Models\Patron
+
+create:
+    title: hendrikerz.patreonlist::lang.patrons.create_patron
+    redirect: hendrikerz/patreonlist/patrons/update/:id
+    redirectClose: hendrikerz/patreonlist/patrons
+
+update:
+    title: hendrikerz.patreonlist::lang.patrons.update_patron
+    redirect: hendrikerz/patreonlist/patrons/update/:id
+    redirectClose: hendrikerz/patreonlist/patrons

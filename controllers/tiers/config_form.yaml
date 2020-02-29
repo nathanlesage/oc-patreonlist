@@ -1,0 +1,16 @@
+name: hendrikerz.patreonlist::lang.tiers.tiers_title
+modelClass: HendrikErz\PatreonList\Models\Tier
+form: $/hendrikerz/patreonlist/models/tier/fields.yaml
+defaultRedirect: hendrikerz/patreonlist/tiers
+create:
+    title: hendrikerz.patreonlist::lang.tiers.create_form_title
+    redirect: 'hendrikerz/patreonlist/tiers/update/:id'
+    redirectClose: hendrikerz/patreonlist/tiers
+    flashSave: Success
+update:
+    title: hendrikerz.patreonlist::lang.tiers.update_form_title
+    redirect: hendrikerz/patreonlist/tiers
+    redirectClose: hendrikerz/patreonlist/tiers
+    flashSave: Success
+    flashDelete: Success
+preview: {  }

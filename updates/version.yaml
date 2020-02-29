@@ -1,0 +1,8 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table hendrikerz_patreonlist_patrons'
+    - builder_table_create_hendrikerz_patreonlist_patrons.php
+1.0.3:
+    - 'Created table hendrikerz_patreonlist_tiers'
+    - builder_table_create_hendrikerz_patreonlist_tiers.php

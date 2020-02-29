@@ -1,0 +1,21 @@
+scopes:
+    patron_status:
+      label: 'hendrikerz.patreonlist::lang.filter.patron_status_active'
+      conditions: patron_status = 1
+      type: checkbox
+    patron_status2:
+      label: 'hendrikerz.patreonlist::lang.filter.patron_status_inactive'
+      conditions: patron_status = 0
+      type: checkbox
+    tier:
+      label: 'hendrikerz.patreonlist::lang.filter.tiers'
+      modelClass: HendrikErz\PatreonList\Models\Tier
+      conditions: tier_id in (:filtered)
+      nameFrom: name
+    current_pledge:
+      label: 'hendrikerz.patreonlist::lang.filter.pledge'
+      type: numberrange
+      default:
+        0: 0
+        1: 1000
+      conditions: current_pledge >= ':min' and current_pledge <= ':max'
