@@ -73,7 +73,7 @@ class PatronImport extends \Backend\Models\ImportModel
 
           // Same: We want a nice boolean here.
           if (isset($data['patron_status'])) {
-            $data['patron_status'] = $data['patron_status'] === 'Active patron' ? 1 : 0;
+            $data['patron_status'] = strtolower($data['patron_status']) === 'active patron' ? 1 : 0;
           }
 
           // Now, let's see if we already have this patron somewhere
