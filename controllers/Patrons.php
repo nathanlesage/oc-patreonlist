@@ -18,6 +18,9 @@ class Patrons extends Controller
     public $formConfig = 'config_form.yaml';
     public $importExportConfig = 'config_import.yaml';
 
+    // User needs anything from the patrons_ permissions
+    public $requiredPermissions = [ 'hendrikerz.patreonlist.manage' ];
+
     public function __construct()
     {
         parent::__construct();

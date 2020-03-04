@@ -8,6 +8,8 @@ navigation:
     main:
         label: 'hendrikerz.patreonlist::lang.plugin.name'
         url: hendrikerz/patreonlist/patrons
+        permissions:
+          - hendrikerz.patreonlist.manage
         icon: icon-credit-card
         sideMenu:
             list:
@@ -22,3 +24,7 @@ navigation:
                 label: Tiers
                 url: /hendrikerz/patreonlist/tiers
                 icon: icon-sitemap
+permissions:
+    hendrikerz.patreonlist.manage:
+        tab: Patreon List
+        label: Access the Patreon List Plugin
