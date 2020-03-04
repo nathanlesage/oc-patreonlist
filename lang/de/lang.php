@@ -4,7 +4,6 @@
         'description' => 'Mit diesem Plugin können Patrons auf Patreon verwaltet werden und als Liste auf der Webseite dargestellt werden.',
         'import_csv' => 'Patrons importieren',
         'list_patrons' => 'Patrons',
-        'close_confirm' => 'Schließen?'
     ],
     'patrons' => [
         'title' => 'Patrons',
@@ -37,6 +36,14 @@
         'form_input_charge_status_comment' => 'Der Status der letzten Zahlung',
         'form_input_follower_label' => 'Folgt dir',
         'form_input_follower_comment' => 'Folgt dir dieser Patron?',
+        'form_input_hide_label' => 'Patron verstecken',
+        'form_input_hide_comment' => 'Wenn aktiv wird dieser Patron nirgends ausgegeben, unabhängig von den Einstellungen. Hilfreich, um Patrons zu anonymisieren.',
+        'form_input_extra1_label' => 'Extra-Text (1)',
+        'form_input_extra1_comment' => 'In diesem Feld können arbiträre Informationen gespeichert werden.',
+        'form_input_extra2_label' => 'Extra-Text (2)',
+        'form_input_extra2_comment' => 'In diesem Feld können arbiträre Informationen gespeichert werden.',
+        'form_input_patreon_id_label' => 'Patreon Benutzer-ID',
+        'form_input_patreon_id_comment' => 'Die Benutzer-ID des Patrons auf Patreon'
     ],
     'tiers' => [
       'tiers_title' => 'Tiers',
@@ -76,13 +83,15 @@
       ]
     ],
     'filter' => [
-      'patron_status_active' => 'Nur aktive Patrons',
-      'patron_status_inactive' => 'Nur inaktive Patrons',
+      'patron_status_active' => 'Aktiv',
+      'patron_status_inactive' => 'Inaktiv',
       'tiers' => 'Tiers',
-      'pledge' => 'Summe'
+      'pledge' => 'Summe',
+      'patron_status_hidden' => 'Ausgeblendet'
     ],
     'columns' => [
       'id_label' => 'ID',
+      'patreon_id_label' => 'Patreon-ID',
       'created_on_label' => 'Erstellt am',
       'updated_on_label' => 'Aktualisiert am',
       'removed_on_label' => 'Gelöscht am',
@@ -101,6 +110,9 @@
       'sort_label' => 'Sortierreihenfolge',
       'description_label' => 'Beschreibung',
       'pledge_amount_label' => 'Summe (Dollar)',
-      'patron_count_label' => 'Patrons auf diesem Tier'
+      'patron_count_label' => 'Patrons auf diesem Tier',
+      'hide_from_all' => 'Versteckt',
+      'extra1_label' => 'Extra (1)',
+      'extra2_label' => 'Extra (2)'
     ]
 ];

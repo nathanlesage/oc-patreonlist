@@ -64,8 +64,13 @@ protected function getPatronList () {
 
   // Simply return all patrons, becomes available via patreonList.patrons
   public function patrons () {
+    // Retrieve all patrons
     $patrons = $this->getPatronList();
-    // Now sort according to the user
-    return $patrons;
+
+    // Return a list filtered without all those
+    // patrons to be hidden
+    return $patrons->reject(function ($patron) {
+      return $patron->hide_from_all;
+    });;
   }
 }

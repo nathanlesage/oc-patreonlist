@@ -24,14 +24,14 @@ class PatronImport extends \Backend\Models\ImportModel
         foreach ($results as $row => $data) {
           // Warn if there is no Email, as this is
           // being used as sort of an identifier internally
-          if (!isset($data['email']) || $data['email'] === '') {
-            $this->logWarning($row, "The Patron " . $data['name'] . " has no associated email! It is recommended to provide an Email for all patrons.");
+          if (!isset($data['patreon_id'])) {
+            $this->logWarning($row, "The Patron " . $data['name'] . " has no Patreon ID!");
           } else {
             // Warn of possible duplicates
-            if (in_array($data['email'], $seen)) {
-              $this->logWarning($row, 'The Patron ' . $data['name'] . ' (' . $data['email'] . ') has already been imported! Possible Duplicate.');
+            if (in_array($data['patreon_id'], $seen)) {
+              $this->logWarning($row, 'The Patron ' . $data['name'] . ' (' . $data['patreon_id'] . ') has already been imported! Possible Duplicate.');
             } else {
-              $seen[] = $data['email'];
+              $seen[] = $data['patreon_id'];
             }
           }
 
@@ -78,7 +78,7 @@ class PatronImport extends \Backend\Models\ImportModel
 
           // Now, let's see if we already have this patron somewhere
           try {
-            $patron = Patron::where('email', $data['email'])->firstOrFail();
+            $patron = Patron::where('patreon_id', $data['patreon_id'])->firstOrFail();
             $patron->fill($data);
             if ($tier) {
               // Attach to its tier

@@ -11,6 +11,7 @@ class BuilderTableCreateHendrikerzPatreonlistPatrons extends Migration
         {
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
+            $table->integer('patreon_id')->unsigned();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('deleted_at')->nullable();
@@ -26,6 +27,9 @@ class BuilderTableCreateHendrikerzPatreonlistPatrons extends Migration
             $table->integer('max_amount')->nullable()->unsigned()->default(0);
             $table->dateTime('last_charge')->nullable();
             $table->text('charge_status')->nullable();
+            $table->boolean('hide_from_all')->default(0);
+            $table->text('extra1')->nullable();
+            $table->text('extra2')->nullable();
         });
     }
 

@@ -72,6 +72,11 @@ class Tiers extends \Cms\Classes\ComponentBase
     }
 
     foreach ($tiers as $tier) {
+      // Always hide all hidden patrons
+      $tier->patrons = $tier->patrons->reject(function ($patron) {
+        return $patron->hide_from_all;
+      });
+
       // Kick out all former patrons
       if ($excludeFormerPatrons) {
         $tier->patrons = $tier->patrons->reject(function ($patron) {

@@ -7,6 +7,16 @@ tabs:
             type: text
             comment: 'hendrikerz.patreonlist::lang.patrons.form_input_name_comment'
             tab: 'hendrikerz.patreonlist::lang.patrons.form_tab_personal_title'
+        patreon_id:
+            label: 'hendrikerz.patreonlist::lang.patrons.form_input_patreon_id_label'
+            span: auto
+            required: true
+            context:
+                - create
+                - preview
+            type: text
+            comment: 'hendrikerz.patreonlist::lang.patrons.form_input_patreon_id_comment'
+            tab: 'hendrikerz.patreonlist::lang.patrons.form_tab_personal_title'
         email:
             label: 'hendrikerz.patreonlist::lang.patrons.form_input_email_label'
             span: auto
@@ -82,3 +92,22 @@ tabs:
             type: datepicker
             comment: 'hendrikerz.patreonlist::lang.patrons.form_input_lastcharge_comment'
             tab: 'hendrikerz.patreonlist::lang.patrons.form_tab_status_title'
+        hide_from_all:
+            label: 'hendrikerz.patreonlist::lang.patrons.form_input_hide_label'
+            span: auto
+            type: switch
+            comment: 'hendrikerz.patreonlist::lang.patrons.form_input_hide_comment'
+            tab: 'hendrikerz.patreonlist::lang.patrons.form_tab_more_title'
+        extra1:
+            label: 'hendrikerz.patreonlist::lang.patrons.form_input_extra1_label'
+            span: auto
+            type: text
+            comment: 'hendrikerz.patreonlist::lang.patrons.form_input_extra1_comment'
+            tab: 'hendrikerz.patreonlist::lang.patrons.form_tab_more_title'
+        extra2:
+            label: 'hendrikerz.patreonlist::lang.patrons.form_input_extra2_label'
+            size: large
+            span: full
+            type: textarea
+            comment: 'hendrikerz.patreonlist::lang.patrons.form_input_extra2_comment'
+            tab: 'hendrikerz.patreonlist::lang.patrons.form_tab_more_title'

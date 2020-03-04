@@ -3,6 +3,10 @@ columns:
         label: hendrikerz.patreonlist::lang.columns.id_label
         type: number
         invisible: true
+    patreon_id:
+        label: hendrikerz.patreonlist::lang.columns.patreon_id_label
+        type: number
+        sortable: true
     created_at:
         label: hendrikerz.patreonlist::lang.columns.created_on_label
         type: datetime
@@ -33,6 +37,7 @@ columns:
     follows_you:
         label: hendrikerz.patreonlist::lang.columns.follows_label
         type: switch
+        invisible: true
     current_pledge:
         label: hendrikerz.patreonlist::lang.columns.pledge_label
         type: number
@@ -41,6 +46,7 @@ columns:
         label: hendrikerz.patreonlist::lang.columns.lifetime_label
         type: number
         format: $%d
+        invisible: true
     tier:
         label: hendrikerz.patreonlist::lang.columns.tier_label
         relation: tier
@@ -54,9 +60,23 @@ columns:
         label: hendrikerz.patreonlist::lang.columns.max_label
         type: number
         format: $%d
+        invisible: true
     last_charge:
         label: hendrikerz.patreonlist::lang.columns.last_charge_label
         type: date
+        invisible: true
     charge_status:
         label: hendrikerz.patreonlist::lang.columns.charge_status_label
         type: text
+        invisible: true
+    hide_from_all:
+        label: hendrikerz.patreonlist::lang.columns.hide_from_all
+        type: switch
+        sortable: true
+    extra1:
+        label: hendrikerz.patreonlist::lang.columns.extra1_label
+        searchable: true
+    extra2:
+        label: hendrikerz.patreonlist::lang.columns.extra2_label
+        searchable: true
+        invisible: true

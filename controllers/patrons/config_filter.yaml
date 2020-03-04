@@ -7,6 +7,10 @@ scopes:
       label: 'hendrikerz.patreonlist::lang.filter.patron_status_inactive'
       conditions: patron_status = 0
       type: checkbox
+    only_hidden:
+      label: 'hendrikerz.patreonlist::lang.filter.patron_status_hidden'
+      conditions: hide_from_all = 1
+      type: checkbox
     tier:
       label: 'hendrikerz.patreonlist::lang.filter.tiers'
       modelClass: HendrikErz\PatreonList\Models\Tier
