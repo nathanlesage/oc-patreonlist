@@ -26,7 +26,7 @@ columns:
         sortable: true
     description:
         label: hendrikerz.patreonlist::lang.columns.description_label
-        type: text
+        type: tier_description
         searchable: true
         sortable: false
     pledge_amount:

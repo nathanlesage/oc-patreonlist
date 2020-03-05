@@ -33,7 +33,7 @@ columns:
         searchable: true
     patron_status:
         label: hendrikerz.patreonlist::lang.columns.status_label
-        type: switch
+        type: patron_status
     follows_you:
         label: hendrikerz.patreonlist::lang.columns.follows_label
         type: switch
@@ -71,7 +71,7 @@ columns:
         invisible: true
     hide_from_all:
         label: hendrikerz.patreonlist::lang.columns.hide_from_all
-        type: switch
+        type: hide_indicator
         sortable: true
     extra1:
         label: hendrikerz.patreonlist::lang.columns.extra1_label

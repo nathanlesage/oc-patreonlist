@@ -99,6 +99,8 @@
       'email_label' => 'Email',
       'twitter_label' => 'Twitter',
       'status_label' => 'Patron-Status',
+      'status_active' => 'Aktiv',
+      'status_inactive' => 'Inaktiv',
       'follows_label' => 'Folgt dir',
       'pledge_label' => 'Aktuelle Summe (Dollar)',
       'lifetime_label' => 'Gesamtsumme (Dollar)',
@@ -111,7 +113,8 @@
       'description_label' => 'Beschreibung',
       'pledge_amount_label' => 'Summe (Dollar)',
       'patron_count_label' => 'Patrons auf diesem Tier',
-      'hide_from_all' => 'Versteckt',
+      'hide_from_all' => 'Anzeigestatus',
+      'hide_from_all_tooltip' => 'Dieser Patron ist versteckt',
       'extra1_label' => 'Extra (1)',
       'extra2_label' => 'Extra (2)'
     ]

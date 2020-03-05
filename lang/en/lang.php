@@ -100,6 +100,8 @@
         'email_label' => 'Email',
         'twitter_label' => 'Twitter',
         'status_label' => 'Patron Status',
+        'status_active' => 'Active',
+        'status_inactive' => 'Inactive',
         'follows_label' => 'Follows You',
         'pledge_label' => 'Pledge $',
         'lifetime_label' => 'Lifetime $',
@@ -112,7 +114,8 @@
         'description_label' => 'Description',
         'pledge_amount_label' => 'Pledge Amount $',
         'patron_count_label' => 'Patrons on this tier',
-        'hide_from_all' => 'Hidden',
+        'hide_from_all' => 'Visibility',
+        'hide_from_all_tooltip' => 'This patron is hidden',
         'extra1_label' => 'Extra (1)',
         'extra2_label' => 'Extra (2)'
     ]
