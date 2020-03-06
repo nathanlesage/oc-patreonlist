@@ -60,6 +60,11 @@ class Tiers extends \Cms\Classes\ComponentBase
         ];
     }
 
+    /**
+     * Returns a list of tiers with patrons, becomes available as patreonTiers.tiers.
+     *
+     * @return Tier[]
+     */
     public function tiers()
     {
         $excludeFormerPatrons = $this->property('excludeZero');
@@ -83,7 +88,7 @@ class Tiers extends \Cms\Classes\ComponentBase
             // Kick out all former patrons
             if ($excludeFormerPatrons) {
                 $tier->patrons = $tier->patrons->reject(function ($patron) {
-                    return $patron->current_pledge === 0 || !$patron->patron_status;
+                    return !$patron->isActive();
                 });
             }
 

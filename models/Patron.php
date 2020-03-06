@@ -53,4 +53,19 @@ class Patron extends Model
      */
     public $rules = [
     ];
+
+    /**
+     * Returns true, if the patron is active, otherwise false.
+     *
+     * @return boolean
+     */
+    public function isActive ()
+    {
+      // Requirements to be considered active:
+      // 1. The patron_status must be set to "true" (e.g. "Active patron")
+      // 2. The current_pledge must be > 0
+      // 3. The charge_status must not be null
+      // Cf.: https://docs.patreon.com/#member
+      return $this->patron_status && $this->current_pledge > 0 && $this->charge_status;
+    }
 }

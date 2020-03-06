@@ -42,6 +42,16 @@ The plugin contains two fields, one as a simple text input, and one textarea, wh
 
 Some patrons want to support you, but express the wish not to be listed on your website. To accomodate for that, each patron within the plugin has a flag that can be set to hide them from all lists. If the flag is set, the respective patron will be hidden from each list and filtered out, so regardless of any option on the components, these patrons will not be displayed. This flag will not be updated during subsequent CSV imports.
 
+### Definition of "Active Patrons"
+
+Patrons can be in one of multiple different states, so this plugin has to make a concession when a patron counts as "active". Currently, based on what the CSCV-fields from Patreon look like, the following conditions must be met in order for this plugin to consider a patron "active", e.g. eligible to be displayed on the list of patrons:
+
+1. The patron must be active, that is: In their entry the "Status" must be the string "Active patron" (which internally is translated into a boolean true/false dichotomy).
+2. The patron must have a current pledge greater than zero dollars.
+3. The patron's last charge status must not be null, that is: Patreon must have charged them at least once (albeit the plugin does _not_ differentiate between the different states such as Paid, Pending, Refused, Fraud, or Refund -- all of them satisfy this criterium).
+
+If you check the "Only Active" option (default: checked) on one of the components, patrons not fulfilling these three criteria will be filtered out and not displayed. This is to ensure that new patrons will only be listed as soon as they were charged at least once.
+
 ### Managing Tiers
 
 The tiers are a unique feature of Patreon and are central to this plugin as well. If you import a CSV file, the tiers will be created automatically. You can afterwards change their name or the pledge amount on the Tier page. This list will additionally show you how many patrons are on each tier. The description is initially empty, but can be populated by you for informative purposes. You can either copy the description from Patreon or create a new one.

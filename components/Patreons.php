@@ -49,20 +49,29 @@ class Patreons extends \Cms\Classes\ComponentBase
         ];
     }
 
+    /**
+     * Unifies the retrieval of a list of patrons across the component.
+     *
+     * @return Patron[]
+     */
     protected function getPatronList()
     {
         $exclude = $this->property('excludeZero');
+        $patrons = Patron::orderBy($this->property('sortBy'), $this->property('sortOrder'))->get();
         if ($exclude) {
-            return Patron::where([
-                ['current_pledge', '>', 0],
-                ['patron_status', '=', 1],
-            ])->orderBy($this->property('sortBy'), $this->property('sortOrder'))->get();
+            return $patrons->reject(function ($patron) {
+              return !$patron->isActive();
+            });
         } else {
-            return Patron::orderBy($this->property('sortBy'), $this->property('sortOrder'))->get();
+            return $patrons;
         }
     }
 
-    // Simply return all patrons, becomes available via patreonList.patrons
+    /**
+     * Simply return all patrons, becomes available via patreonList.patrons
+     *
+     * @return Patron[]
+     */
     public function patrons()
     {
         // Retrieve all patrons

@@ -2,3 +2,7 @@
     - 'Initial version of the Patreon List plugin.'
     - builder_table_create_hendrikerz_patreonlist_patrons.php
     - builder_table_create_hendrikerz_patreonlist_tiers.php
+1.0.2:
+    - 'Implement custom columns for better accessibility of the patron list.'
+    - 'Correct code formatting.'
+    - 'Improved the detection for inactive patrons. Now it must have patron_status = true, current_pledge > 0 and a non-empty charge_status.'
