@@ -1,14 +1,13 @@
 <?php namespace HendrikErz\PatreonList\Updates;
 
-use Schema;
 use October\Rain\Database\Updates\Migration;
+use Schema;
 
 class BuilderTableCreateHendrikerzPatreonlistPatrons extends Migration
 {
     public function up()
     {
-        Schema::create('hendrikerz_patreonlist_patrons', function($table)
-        {
+        Schema::create('hendrikerz_patreonlist_patrons', function ($table) {
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
             $table->integer('patreon_id')->unsigned();

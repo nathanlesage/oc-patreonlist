@@ -3,7 +3,7 @@
         'name' => 'Patreon List',
         'description' => 'This plugin lets you easily manage a list of backers from Patreon. For creators from a creator!',
         'import_csv' => 'Import Patrons',
-        'list_patrons' => 'Patrons'
+        'list_patrons' => 'Patrons',
     ],
     'patrons' => [
         'title' => 'Patrons',
@@ -44,7 +44,7 @@
         'form_input_extra2_label' => 'Extra Text (2)',
         'form_input_extra2_comment' => 'Use this text field to save additional information for this patron.',
         'form_input_patreon_id_label' => 'Patreon User ID',
-        'form_input_patreon_id_comment' => 'This ID is assigned by Patreon'
+        'form_input_patreon_id_comment' => 'This ID is assigned by Patreon',
     ],
     'tiers' => [
         'tiers_title' => 'Tiers',
@@ -88,7 +88,7 @@
         'patron_status_inactive' => 'Inactive',
         'tiers' => 'Tiers',
         'pledge' => 'Pledge',
-        'patron_status_hidden' => 'Hidden'
+        'patron_status_hidden' => 'Hidden',
     ],
     'columns' => [
         'id_label' => 'ID',
@@ -117,6 +117,6 @@
         'hide_from_all' => 'Visibility',
         'hide_from_all_tooltip' => 'This patron is hidden',
         'extra1_label' => 'Extra (1)',
-        'extra2_label' => 'Extra (2)'
-    ]
+        'extra2_label' => 'Extra (2)',
+    ],
 ];

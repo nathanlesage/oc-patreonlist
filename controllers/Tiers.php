@@ -1,14 +1,14 @@
 <?php namespace HendrikErz\PatreonList\Controllers;
 
-use Backend\Classes\Controller;
 use BackendMenu;
+use Backend\Classes\Controller;
 
 class Tiers extends Controller
 {
     public $implement = [
-      'Backend\Behaviors\ListController',
-      'Backend\Behaviors\FormController',
-      'Backend\Behaviors\ReorderController'
+        'Backend\Behaviors\ListController',
+        'Backend\Behaviors\FormController',
+        'Backend\Behaviors\ReorderController',
     ];
 
     public $listConfig = 'config_list.yaml';
@@ -16,7 +16,7 @@ class Tiers extends Controller
     public $reorderConfig = 'config_reorder.yaml';
 
     // User needs anything from the tiers_ permissions
-    public $requiredPermissions = [ 'hendrikerz.patreonlist.manage' ];
+    public $requiredPermissions = ['hendrikerz.patreonlist.manage'];
 
     public function __construct()
     {

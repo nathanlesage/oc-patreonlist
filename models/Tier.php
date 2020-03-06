@@ -14,17 +14,16 @@ class Tier extends Model
     protected $dates = ['deleted_at'];
 
     protected $fillable = [
-      'name', 'pledge_amount'
+        'name', 'pledge_amount',
     ];
 
     protected $implements = [
-      'October\Rain\Database\Traits\Sortable'
+        'October\Rain\Database\Traits\Sortable',
     ];
 
     public $hasMany = [
-      'patrons' => ['HendrikErz\PatreonList\Models\Patron']
+        'patrons' => ['HendrikErz\PatreonList\Models\Patron'],
     ];
-
 
     /**
      * @var string The database table used by the model.
