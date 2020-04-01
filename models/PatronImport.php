@@ -2,6 +2,7 @@
 
 use HendrikErz\PatreonList\Models\Patron;
 use HendrikErz\PatreonList\Models\Tier;
+use Carbon\Carbon;
 
 class PatronImport extends \Backend\Models\ImportModel
 {
@@ -74,6 +75,16 @@ class PatronImport extends \Backend\Models\ImportModel
             // Same: We want a nice boolean here.
             if (isset($data['patron_status'])) {
                 $data['patron_status'] = strtolower($data['patron_status']) === 'active patron' ? 1 : 0;
+            }
+
+            // During payment processing, some patrons will already be included
+            // despite having not yet a last charge status. If so, use the
+            // current date and warn about that fact, so the creator knows that
+            // they should re-try it afterwards. These errors will be thrown on
+            // MySQL-based databases, but, for instance, not on SQLite databases.
+            if ($data['last_charge'] === '') {
+              $this->logWarning($row, "Patron " . $data['name'] . " (" . $data['email'] . ") does not have a charge date. Assuming today.");
+              $data['last_charge'] = Carbon::now();
             }
 
             // Now, let's see if we already have this patron somewhere

@@ -6,3 +6,5 @@
     - 'Implement custom columns for better accessibility of the patron list.'
     - 'Correct code formatting.'
     - 'Improved the detection for inactive patrons. Now it must have patron_status = true, current_pledge > 0 and a non-empty charge_status.'
+1.0.3:
+    - 'Fix an error with the date column last_charge on some SQL databases. It will now by default assume the current time and warn.'
