@@ -14,7 +14,9 @@ class Tier extends Model
     protected $dates = ['deleted_at'];
 
     protected $fillable = [
-        'name', 'pledge_amount',
+        'name',
+        'pledge_amount',
+        'currency'
     ];
 
     protected $implements = [

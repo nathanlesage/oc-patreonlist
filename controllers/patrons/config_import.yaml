@@ -5,7 +5,7 @@
 import:
     title: hendrikerz.patreonlist::lang.plugin.import_csv
     modelClass: HendrikErz\PatreonList\Models\PatronImport
-    list: $/hendrikerz/patreonlist/models/patron/columns.yaml
+    list: $/hendrikerz/patreonlist/models/patron/columns_import.yaml
     defaultRedirect: /hendrikerz/patreonlist/patrons
     redirect: /hendrikerz/patreonlist/patrons
 defaultFormatOptions:

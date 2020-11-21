@@ -79,11 +79,15 @@ tabs:
             type: number
             comment: 'hendrikerz.patreonlist::lang.patrons.form_input_lifetime_comment'
             tab: 'hendrikerz.patreonlist::lang.patrons.form_tab_status_title'
-        max_amount:
-            label: 'hendrikerz.patreonlist::lang.patrons.form_input_max_label'
+        currency:
+            label: 'hendrikerz.patreonlist::lang.patrons.form_input_currency_label'
             span: auto
-            type: number
-            comment: 'hendrikerz.patreonlist::lang.patrons.form_input_max_comment'
+            comment: 'hendrikerz.patreonlist::lang.patrons.form_input_currency_comment'
+            tab: 'hendrikerz.patreonlist::lang.patrons.form_tab_status_title'
+        charge_frequency:
+            label: 'hendrikerz.patreonlist::lang.patrons.form_input_charge_frequency_label'
+            span: auto
+            comment: 'hendrikerz.patreonlist::lang.patrons.form_input_charge_frequency_comment'
             tab: 'hendrikerz.patreonlist::lang.patrons.form_tab_status_title'
         last_charge:
             label: 'hendrikerz.patreonlist::lang.patrons.form_input_lastcharge_label'

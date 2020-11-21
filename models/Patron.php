@@ -12,9 +12,8 @@ class Patron extends Model
 
     protected $casts = [
         'patron_status' => 'boolean',
-        'current_pledge' => 'integer',
-        'lifetime_pledge' => 'integer',
-        'max_amount' => 'integer',
+        'current_pledge' => 'float',
+        'lifetime_pledge' => 'float',
         'follows_you' => 'boolean',
         'hide_from_all' => 'boolean',
         'patreon_id' => 'integer',
@@ -32,8 +31,9 @@ class Patron extends Model
         'current_pledge',
         'lifetime_pledge',
         'patron_since',
-        'max_amount',
         'last_charge',
+        'currency',
+        'charge_frequency',
         'charge_status',
         'extra1',
         'extra2',
@@ -63,9 +63,9 @@ class Patron extends Model
     {
       // Requirements to be considered active:
       // 1. The patron_status must be set to "true" (e.g. "Active patron")
-      // 2. The current_pledge must be > 0
+      // 2. The current_pledge must be > 0.0
       // 3. The charge_status must not be null
       // Cf.: https://docs.patreon.com/#member
-      return $this->patron_status && $this->current_pledge > 0 && $this->charge_status;
+      return $this->patron_status && $this->current_pledge > 0.0 && $this->charge_status;
     }
 }

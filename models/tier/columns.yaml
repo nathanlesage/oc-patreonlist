@@ -32,8 +32,10 @@ columns:
     pledge_amount:
         label: hendrikerz.patreonlist::lang.columns.pledge_amount_label
         type: number
-        format: $%d
         searchable: true
+        sortable: true
+    currency:
+        label: hendrikerz.patreonlist::lang.columns.currency_label
         sortable: true
     patrons_count:
         label: hendrikerz.patreonlist::lang.columns.patron_count_label

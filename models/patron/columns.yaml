@@ -42,12 +42,16 @@ columns:
     current_pledge:
         label: hendrikerz.patreonlist::lang.columns.pledge_label
         type: number
-        format: $%d
+    currency:
+        label: hendrikerz.patreonlist::lang.columns.currency_label
+        sortable: true
     lifetime_pledge:
         label: hendrikerz.patreonlist::lang.columns.lifetime_label
         type: number
-        format: $%d
         invisible: true
+    charge_frequency:
+        label: hendrikerz.patreonlist::lang.columns.charge_frequency_label
+        sortable: true
     tier:
         label: hendrikerz.patreonlist::lang.columns.tier_label
         relation: tier
@@ -57,11 +61,6 @@ columns:
     patron_since:
         label: hendrikerz.patreonlist::lang.columns.patronage_label
         type: timesince
-    max_amount:
-        label: hendrikerz.patreonlist::lang.columns.max_label
-        type: number
-        format: $%d
-        invisible: true
     last_charge:
         label: hendrikerz.patreonlist::lang.columns.last_charge_label
         type: date

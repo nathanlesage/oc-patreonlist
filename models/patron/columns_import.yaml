@@ -1,0 +1,68 @@
+# The columns defined here are not all that are available, but those that are
+# present in the CSV file. Therefore, the labels are not translated here. For
+# the columns present in the patron list see the columns.yaml. This file is only
+# imported by the file controllers/patrons/config_import.yaml.
+
+columns:
+    patreon_id:
+        label: User ID
+        type: number
+        sortable: true
+    name:
+        label: Name
+        type: text
+        searchable: true
+    email:
+        label: Email
+        type: text
+        searchable: true
+    twitter:
+        label: Twitter
+        type: text
+        searchable: true
+        invisible: true
+    patron_status:
+        label: Patron Status
+        type: patron_status
+    follows_you:
+        label: Follows You
+        type: switch
+        invisible: true
+    current_pledge:
+        label: Pledge Amount
+        type: number
+    lifetime_pledge:
+        label: Lifetime Amount
+        type: number
+        invisible: true
+    tier:
+        label: Tier
+        relation: tier
+        select: name
+        searchable: true
+        sortable: true
+    patron_since:
+        label: Patronage Since Date
+        type: timesince
+    currency:
+        label: Currency
+        sortable: true
+    charge_frequency:
+        label: Charge Frequency
+        sortable: true
+    last_charge:
+        label: Last Charge Date
+        type: date
+        invisible: true
+    charge_status:
+        label: Last Charge Status
+        type: text
+        invisible: true
+    extra1:
+        label: hendrikerz.patreonlist::lang.columns.extra1_label
+        searchable: true
+        invisible: true
+    extra2:
+        label: hendrikerz.patreonlist::lang.columns.extra2_label
+        searchable: true
+        invisible: true

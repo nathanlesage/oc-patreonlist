@@ -8,3 +8,7 @@
     - 'Improved the detection for inactive patrons. Now it must have patron_status = true, current_pledge > 0 and a non-empty charge_status.'
 1.0.3:
     - 'Fix an error with the date column last_charge on some SQL databases. It will now by default assume the current time and warn.'
+1.1.0:
+    - 'Update PatreonList to match the new CSV format which now also includes currency information.'
+    - 202011211858_update_table_hendrikerz_patreonlist_patrons.php
+    - 202011211858_update_table_hendrikerz_patreonlist_tiers.php

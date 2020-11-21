@@ -14,12 +14,6 @@ class PatronImport extends \Backend\Models\ImportModel
     // More info: https://octobercms.com/docs/backend/import-export
     public function importData($results, $sessionKey = null)
     {
-        $numberFields = [
-            'current_pledge',
-            'max_amount',
-            'lifetime_pledge',
-        ];
-
         $seen = []; // Remember what patrons we had to warn on duplicates
 
         foreach ($results as $row => $data) {
@@ -49,20 +43,12 @@ class PatronImport extends \Backend\Models\ImportModel
                     $tier = new Tier;
                     $tier->name = $data['tier'];
                     if (isset($data['current_pledge']) && $data['current_pledge'] !== '') {
-                        $tier->pledge_amount = substr($data['current_pledge'], 1);
+                        $tier->pledge_amount = floatval($data['current_pledge']);
+                        $tier->currency = $data['currency'];
                     } else {
-                        $tier->pledge_amount = 0;
+                        $tier->pledge_amount = 0.0;
                     }
                     $tier->save();
-                }
-            }
-
-            // Now, correct certain fields. For instance, the Patreon
-            // CSVs all include the pledges in the format $%d, which
-            // is unhandy to store as an integer.
-            foreach ($numberFields as $field) {
-                if (isset($data[$field]) && strpos($data[$field], '$') === 0) {
-                    $data[$field] = substr($data[$field], 1);
                 }
             }
 

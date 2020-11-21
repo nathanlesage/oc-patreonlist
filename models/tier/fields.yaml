@@ -11,6 +11,10 @@ fields:
         required: 1
         type: number
         comment: 'hendrikerz.patreonlist::lang.tiers.form_input_pledge_amount_comment'
+    currency:
+        label: 'hendrikerz.patreonlist::lang.tiers.form_input_currency_label'
+        span: auto
+        comment: 'hendrikerz.patreonlist::lang.tiers.form_input_currency_comment'
     description:
         label: 'hendrikerz.patreonlist::lang.tiers.form_input_description_label'
         size: ''
