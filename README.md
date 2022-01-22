@@ -1,3 +1,7 @@
+**THIS PLUGIN IS DEPRECATED.**
+
+> This plugin is no longer maintained. You can find the new, maintained version for WinterCMS at this repository: https://github.com/nathanlesage/wn-patreonlist-plugin
+
 # OctoberCMS PatreonList Plugin
 
 > Automate managing your patron list on your website!
